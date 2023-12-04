@@ -1,5 +1,5 @@
 @use "../abstracts";
-.homepost {
+.viewpost {
   &__inner {
     margin: 60px 0;
   }
@@ -13,17 +13,16 @@
   &__item {
     display: flex;
     gap: 30px;
-    background-color: #ccc;
+    background-color: #ebebeb;
     width: 100%;
-    padding: 30px;
     border-radius: 30px 0 30px 0;
     @include abstracts.screen(lg) {
-      gap: 20px;
+      gap: 10px;
     }
     @include abstracts.screen(sm) {
-      padding: 20px;
+      gap: 0px;
     }
-    + .homepost__item {
+    + viewpost__item {
       margin-top: 30px;
     }
     &-title {
@@ -31,52 +30,73 @@
       font-size: 2.4rem;
       color: rgb(224, 63, 45);
       line-height: 1.4;
-      @include abstracts.screen(lg) {
+      @include abstracts.screen(xl) {
         font-size: 2.2rem;
-        line-height: 1.2;
+      }
+      @include abstracts.screen(lg) {
+        font-size: 1.8rem;
       }
       @include abstracts.screen(md) {
         font-size: 1.7rem;
       }
+      @include abstracts.screen(sm) {
+        font-size: 1.5rem;
+      }
     }
     &-wrap {
       display: flex;
+      padding: 20px;
       flex-direction: column;
       justify-content: space-between;
+      @include abstracts.screen(lg) {
+        padding: 15px;
+      }
+      @include abstracts.screen(sm) {
+        justify-content: center;
+      }
     }
   }
   &__media {
-    height: 100%;
-    @include abstracts.screen(sm) {
-      width: 120px;
+    height: 225px;
+    border-radius: 30px 0 0 0;
+    @include abstracts.screen(lg) {
+      height: 205px;
     }
-    @include abstracts.screen(md) {
-      width: 80px;
+    @include abstracts.screen(sm) {
+      height: 150px;
+    }
+    @include abstracts.screen(sm) {
+      height: 125px;
     }
   }
   &__thumb {
+    border-radius: 30px 0 0 0;
+    display: block;
     width: 350px;
     height: 100%;
     object-fit: cover;
     @include abstracts.screen(lg) {
-      width: 200px;
+      width: 220px;
     }
     @include abstracts.screen(sm) {
       width: 120px;
-    }
-    @include abstracts.screen(md) {
-      width: 80px;
     }
   }
   &__desc {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1.5;
+    @include abstracts.screen(xl) {
+      font-size: 1.55rem;
+    }
     @include abstracts.screen(lg) {
-      line-height: 1.2;
+      font-size: 1.3rem;
     }
     @include abstracts.screen(sm) {
-      display: none;
+      font-size: 1.1rem;
+    }
+    @include abstracts.screen(sm) {
+      font-size: 0.9rem;
     }
   }
   &__btn {
