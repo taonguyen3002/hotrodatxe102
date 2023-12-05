@@ -25,13 +25,13 @@
     gap: 0px;
   }
 }
-.viewpost__item + viewpost__item {
+.viewpost__item + .viewpost__item {
   margin-top: 30px;
 }
 .viewpost__item-title {
   font-weight: 500;
   font-size: 2.4rem;
-  color: rgb(224, 63, 45);
+  color: blue;
   line-height: 1.4;
 }
 @media (max-width: 1199.98px) {
@@ -84,7 +84,7 @@
     height: 150px;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .viewpost__media {
     height: 125px;
   }
@@ -126,9 +126,9 @@
     font-size: 1.1rem;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .viewpost__desc {
-    font-size: 0.9rem;
+    display: none;
   }
 }
 @media (max-width: 575.98px) {

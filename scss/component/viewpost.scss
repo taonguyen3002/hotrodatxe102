@@ -22,13 +22,13 @@
     @include abstracts.screen(sm) {
       gap: 0px;
     }
-    + viewpost__item {
+    + .viewpost__item {
       margin-top: 30px;
     }
     &-title {
       font-weight: 500;
       font-size: 2.4rem;
-      color: rgb(224, 63, 45);
+      color: blue;
       line-height: 1.4;
       @include abstracts.screen(xl) {
         font-size: 2.2rem;
@@ -65,7 +65,7 @@
     @include abstracts.screen(sm) {
       height: 150px;
     }
-    @include abstracts.screen(sm) {
+    @include abstracts.screen(md) {
       height: 125px;
     }
   }
@@ -95,8 +95,8 @@
     @include abstracts.screen(sm) {
       font-size: 1.1rem;
     }
-    @include abstracts.screen(sm) {
-      font-size: 0.9rem;
+    @include abstracts.screen(md) {
+      display: none;
     }
   }
   &__btn {
