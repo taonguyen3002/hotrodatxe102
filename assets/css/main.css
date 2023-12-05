@@ -1979,7 +1979,7 @@ select {
   margin-bottom: 30px;
   text-align: start;
 }
-.viewpost__item {
+.viewpost__wrap {
   display: flex;
   gap: 30px;
   background-color: #ebebeb;
@@ -1987,12 +1987,12 @@ select {
   border-radius: 30px 0 30px 0;
 }
 @media (max-width: 991.98px) {
-  .viewpost__item {
+  .viewpost__wrap {
     gap: 10px;
   }
 }
 @media (max-width: 575.98px) {
-  .viewpost__item {
+  .viewpost__wrap {
     gap: 0px;
   }
 }
@@ -2095,10 +2095,6 @@ select {
 @media (max-width: 575.98px) {
   .viewpost__desc {
     font-size: 1.1rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .viewpost__desc {
     display: none;
   }
 }
@@ -2274,6 +2270,11 @@ html {
   padding-bottom: 20px;
   position: relative;
 }
+@media (max-width: 991.98px) {
+  .post__heading {
+    margin-top: 30px;
+  }
+}
 .post__heading::before {
   content: "";
   position: absolute;
@@ -2285,12 +2286,16 @@ html {
   translate: -50% 0;
   background-color: #000;
 }
-.post__sapo {
-  position: relative;
+.post__sapo-text {
   text-align: start;
+  position: relative;
+  font-weight: 500;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  padding-left: 15px;
   margin-top: 60px;
 }
-.post__sapo::after {
+.post__sapo-text::after {
   content: "";
   position: absolute;
   width: 4px;
@@ -2301,15 +2306,9 @@ html {
   top: 50%;
   translate: 0 -50%;
 }
-.post__sapo-text {
-  font-weight: 500;
-  font-size: 2.3rem;
-  line-height: 1.5;
-  padding-left: 15px;
-}
 .post__media {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   position: relative;
   width: 100%;
   padding-top: 66.7%;
@@ -2370,6 +2369,32 @@ html {
   font-weight: 300;
   line-height: 1.45;
   font-size: 1.5rem;
+}
+.post__item-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.post__item-item {
+  position: relative;
+  font-size: 1.5rem;
+  padding-left: 25px;
+  font-weight: 200;
+  line-height: 1.45;
+}
+.post__item-item + .post__item-item {
+  margin-top: 20px;
+}
+.post__item-item::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  border: 2.5px solid;
+  rotate: -45deg;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  border-color: transparent transparent black black;
 }
 
 /*# sourceMappingURL=main.css.map */

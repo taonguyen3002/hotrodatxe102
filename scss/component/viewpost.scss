@@ -10,7 +10,7 @@
     margin-bottom: 30px;
     text-align: start;
   }
-  &__item {
+  &__wrap {
     display: flex;
     gap: 30px;
     background-color: #ebebeb;
@@ -22,6 +22,8 @@
     @include abstracts.screen(sm) {
       gap: 0px;
     }
+  }
+  &__item {
     + .viewpost__item {
       margin-top: 30px;
     }
@@ -94,8 +96,6 @@
     }
     @include abstracts.screen(sm) {
       font-size: 1.1rem;
-    }
-    @include abstracts.screen(md) {
       display: none;
     }
   }
